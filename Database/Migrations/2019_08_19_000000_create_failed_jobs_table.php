@@ -6,18 +6,17 @@ use Illuminate\Support\Facades\Schema;
 //---- models ---
 use Modules\User\Models\FailedJob as MyModel;
 
-class CreateFailedJobsTable extends Migration
-{
+class CreateFailedJobsTable extends Migration {
     public function getTable() {
         return with(new MyModel())->getTable();
     }
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         if (! Schema::hasTable($this->getTable())) {
             Schema::create($this->getTable(), function (Blueprint $table) {
                 $table->bigIncrements('id');
@@ -35,8 +34,7 @@ class CreateFailedJobsTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists($this->getTable());
     }
 }

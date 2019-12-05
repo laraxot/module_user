@@ -6,18 +6,17 @@ use Illuminate\Support\Facades\Schema;
 //---- models ---
 use Modules\User\Models\User as MyModel;
 
-class CreateUsersTable extends Migration
-{
+class CreateUsersTable extends Migration {
     public function getTable() {
         return with(new MyModel())->getTable();
     }
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         if (! Schema::hasTable($this->getTable())) {
             Schema::create($this->getTable(), function (Blueprint $table) {
                 $table->bigIncrements('id');
@@ -36,8 +35,7 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists($this->getTable());
     }
 }
