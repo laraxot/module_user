@@ -28,7 +28,7 @@ class PasswordResetPanel extends XotBasePanel {
      * @var array
      */
     public static $search = [
-];
+    ];
 
     /**
      * The relationships that should be eager loaded on index queries.
@@ -91,7 +91,6 @@ class PasswordResetPanel extends XotBasePanel {
      *
      * This query determines which instances of the model may be attached to other resources.
      *
-     * @param Request                               $request
      * @param \Illuminate\Database\Eloquent\Builder $query
      *
      * @return \Illuminate\Database\Eloquent\Builder
@@ -103,24 +102,24 @@ class PasswordResetPanel extends XotBasePanel {
 
     public function fields() {
         return [
-  0 => (object) ([
-     'type' => 'String',
-     'name' => 'email',
-     'rules' => 'required',
-     'comment' => null,
-  ]),
-  1 => (object) ([
-     'type' => 'String',
-     'name' => 'token',
-     'rules' => 'required',
-     'comment' => null,
-  ]),
-  2 => (object) ([
-     'type' => 'DateTime',
-     'name' => 'created_at',
-     'comment' => null,
-  ]),
-];
+            0 => (object) ([
+                'type' => 'String',
+                'name' => 'email',
+                'rules' => 'required',
+                'comment' => null,
+            ]),
+            1 => (object) ([
+                'type' => 'String',
+                'name' => 'token',
+                'rules' => 'required',
+                'comment' => null,
+            ]),
+            2 => (object) ([
+                'type' => 'DateTime',
+                'name' => 'created_at',
+                'comment' => null,
+            ]),
+        ];
     }
 
     /**
@@ -136,8 +135,6 @@ class PasswordResetPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-     *
-     * @param \Illuminate\Http\Request $request
      *
      * @return array
      */
@@ -158,8 +155,6 @@ class PasswordResetPanel extends XotBasePanel {
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @param \Illuminate\Http\Request $request
      *
      * @return array
      */

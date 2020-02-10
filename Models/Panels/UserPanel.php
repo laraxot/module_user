@@ -90,7 +90,6 @@ class UserPanel extends XotBasePanel {
      *
      * This query determines which instances of the model may be attached to other resources.
      *
-     * @param Request                               $request
      * @param \Illuminate\Database\Eloquent\Builder $query
      *
      * @return \Illuminate\Database\Eloquent\Builder
@@ -102,25 +101,25 @@ class UserPanel extends XotBasePanel {
 
     public function fields() {
         return [
-  0 => (object) ([
-     'type' => 'String',
-     'name' => 'name',
-     'rules' => 'required',
-     'comment' => null,
-  ]),
-  1 => (object) ([
-     'type' => 'String',
-     'name' => 'email',
-     'rules' => 'required',
-     'comment' => null,
-  ]),
-  2 => (object) ([
-     'type' => 'String',
-     'name' => 'password',
-     'rules' => 'required',
-     'comment' => null,
-  ]),
-];
+            0 => (object) ([
+                'type' => 'String',
+                'name' => 'name',
+                'rules' => 'required',
+                'comment' => null,
+            ]),
+            1 => (object) ([
+                'type' => 'String',
+                'name' => 'email',
+                'rules' => 'required',
+                'comment' => null,
+            ]),
+            2 => (object) ([
+                'type' => 'String',
+                'name' => 'password',
+                'rules' => 'required',
+                'comment' => null,
+            ]),
+        ];
     }
 
     /**
@@ -136,8 +135,6 @@ class UserPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-     *
-     * @param \Illuminate\Http\Request $request
      *
      * @return array
      */
@@ -158,8 +155,6 @@ class UserPanel extends XotBasePanel {
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @param \Illuminate\Http\Request $request
      *
      * @return array
      */
